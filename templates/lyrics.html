@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block title %}Index{% endblock %}
+{% block head %}
+    {{ super() }}
+{% endblock %}
+{% block content %}
+    <div align="center" style="padding-top:20px;">
+     
+     {% for line in result %}
+       <div class="lyric-results"><h3>{{ line }}<br /></h3></div>
+     {% endfor %}
+     
+     <h4>-{{ artist|capitalize }}</h4>
+     <br />
+     <form action="{{ url_for('index') }}">
+      <input type="submit" value="Do it again!" />
+     </form>
+    </div>
+{% endblock %}

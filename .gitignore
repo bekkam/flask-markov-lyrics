@@ -1,0 +1,6 @@
+*env
+*.pyc
+notes.txt
+markov.py
+*Procfile*
+*base2*
